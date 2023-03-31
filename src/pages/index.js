@@ -1,14 +1,26 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import { getMenu } from './api/getMenu';
+import MenuList from '../../components/MenuList'
 
 const Home = (props) => {
+  const isEmpty = JSON.stringify(props.menu) === '{}';
+  console.log(isEmpty);
   return (
     <>
-      <div>
-        <h1>HOME</h1>
-        <ul></ul>
-      </div>
+      <Head>
+        <title>Jabilee Menu</title>
+        <meta
+          name='description'
+          content='Jabillee langhap sarap meals'
+        ></meta>
+      </Head>
+      <h1>Home Page</h1>
+      {isEmpty ? (
+        <h2>No menu found!</h2>
+      ) : (
+        <MenuList menu={props.menu} />
+      )}
+      {/* <MeetupList meetups={props.meetups} /> */}
     </>
   );
 };

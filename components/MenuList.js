@@ -1,20 +1,20 @@
+import { URL } from 'next/dist/compiled/@edge-runtime/primitives/url';
 import MenuItem from './MenuItem';
-import classes from './MenuList.module.css';
 
-function MeetupList(props) {
+function MenuList(props) {
   return (
-    <ul className={classes.list}>
-      {props.meetups.map((meetup) => (
+    <ul>
+      {props.menu.map((item) => (
         <MenuItem
-          key={meetup.id}
-          id={meetup.id}
-          image={meetup.image}
-          title={meetup.title}
-          address={meetup.address}
+          key={item.id}
+          id={item.id}
+          image={item.image}
+          category={item.category}
+          param={item.param}
         />
       ))}
     </ul>
   );
 }
 
-export default MeetupList;
+export default MenuList;
