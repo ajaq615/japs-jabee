@@ -1,6 +1,6 @@
 export async function getStaticProps() {
-    const response = await fetch('https://api-jollibee-menu.vercel.app/menu');
-    const menu = await response.json();
+    const res = await fetch('https://api-jollibee-menu.vercel.app/menu');
+    const menu = await res.json();
     const items = menu.data
   
     return {
