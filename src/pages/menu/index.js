@@ -11,6 +11,9 @@ export async function getStaticProps() {
           image: item.image,
           param: item.param,
         })),
-      },
+        items: {
+            id: 90
+        }
+      }, 
     };
   }
