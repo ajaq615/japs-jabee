@@ -1,5 +1,5 @@
-const MenuItemsPage = () => {
+const MenuItemPage = () => {
   return;
 };
 
-export default MenuItemsPage;
+export default MenuItemPage;
