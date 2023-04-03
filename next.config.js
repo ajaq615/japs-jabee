@@ -7,6 +7,11 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['jb-ph-cdn.tillster.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'jb-ph-cdn.tillster.com',
+      },
+    ],
   },
 }
