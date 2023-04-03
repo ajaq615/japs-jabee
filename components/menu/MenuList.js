@@ -1,9 +1,10 @@
 import { URL } from 'next/dist/compiled/@edge-runtime/primitives/url';
 import MenuItem from './MenuItem';
+import classes from './MenuList.module.css'
 
 function MenuList(props) {
   return (
-    <ul>
+    <ul className={classes.list}>
       {props.menu.map((item) => (
         <MenuItem
           key={item.id}
