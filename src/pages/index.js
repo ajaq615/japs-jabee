@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import MenuList from '../../components/menu/MenuList';
+import Category from '../../components/menu/category';
 
 const Home = (props) => {
   const isEmpty = JSON.stringify(props.menu) === '{}';
@@ -16,6 +17,7 @@ const Home = (props) => {
           alt='.'
         />
       </div>
+      <Category />
       {isEmpty ? <h2>No menu found!</h2> : <MenuList menu={props.menu} />}
     </>
   );
