@@ -1,17 +1,21 @@
 .header {
   width: 100%;
-  height: 5rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #e4163d;
   padding: 0 10%;
+  position: fixed;
+  top: 0px;
 }
 
 .logo {
   font-size: 2rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
+  position: absolute;
+  top: 5px;
 }
 
 .header ul {
@@ -19,11 +23,12 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: baseline;
+  align-items:end;
 }
 
 .header li {
   margin-left: 3rem;
+  padding-left: 700px;
 }
 
 .header a {
