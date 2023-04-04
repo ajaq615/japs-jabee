@@ -9,11 +9,7 @@ const images = [
 const Category = () => {
     return (
     <div className='menu_items'>
-        <img src={images[0]} />
-        <img src={images[1]} />
-        <img src={images[2]} />
-        <img src={images[3]} />
-        <img src={images[4]} />
+        <h1>Hi</h1>
       </div>
     )
 }
