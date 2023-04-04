@@ -14,7 +14,7 @@ const Home = (props) => {
         ></meta>
       </Head>
       <div>
-      <img src='https://jb-ph-cdn.tillster.com/prod/Carousel/Project%20Panama%20Desktop%20Banner_Justin%20Vicente%20Matha.jpg_04a62d40-097f-4e2a-9b1e-87477818ecaa.jpg' alt="."/>
+      {/* <img src='https://jb-ph-cdn.tillster.com/prod/Carousel/Project%20Panama%20Desktop%20Banner_Justin%20Vicente%20Matha.jpg_04a62d40-097f-4e2a-9b1e-87477818ecaa.jpg' alt="."/> */}
       </div>
       {/* <div className='menu_items'>
       <img height="240" src='https://jb-ph-cdn.tillster.com/prod/Carousel/FA-JB_PH_INCREASE_SPOTLIGHT_TILE_792x240_opt.jpg_c6a6a29b-bdcd-4980-9f29-bc7e92977b20.jpg'></img>
@@ -43,6 +43,7 @@ export async function getStaticProps() {
   return {
     props: {
       menu: items.map((item) => ({
+        
         id: item.id,
         category: item.category,
         image: item.image,
