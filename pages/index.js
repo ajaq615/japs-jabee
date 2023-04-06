@@ -1,23 +1,28 @@
-import { Fragment } from 'react';
-import Head from 'next/head';
-import { MongoClient } from 'mongodb';
-
 import MeetupList from '../components/meetups/MeetupList';
+import Head from 'next/head';
 
-function HomePage(props) {
+const HomePage = (props) => {
+  const isEmpty = JSON.stringify(props.meetups) === '{}';
+  console.log(isEmpty);
   return (
-    <Fragment>
+    <>
       <Head>
-        <title>React Meetups</title>
+        <title>Meetups</title>
         <meta
           name='description'
-          content='Browse a huge list of highly active React meetups!'
-        />
+          content='Browse a huge list of react meetups'
+        ></meta>
       </Head>
-      <MeetupList meetups={props.meetups} />;
-    </Fragment>
+      <h1>Home Page</h1>
+      {isEmpty ? (
+        <h2>No meetups found!</h2>
+      ) : (
+        <MeetupList meetups={props.meetups} />
+      )}
+      {/* <MeetupList meetups={props.meetups} /> */}
+    </>
   );
-}
+};
 
 export async function getStaticProps() {
   const response = await fetch('https://api-jollibee-menu.vercel.app/menu');
