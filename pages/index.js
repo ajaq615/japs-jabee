@@ -19,7 +19,7 @@ const HomePage = (props) => {
       ) : (
         <MeetupList meetups={props.meetups} />
       )}
-      {/* <MeetupList meetups={props.meetups} /> */}
+       <MeetupList meetups={props.meetups} />
     </>
   );
 };
